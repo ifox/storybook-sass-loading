@@ -1,25 +1,8 @@
-// ####################################################
-// UI 1
-
 @mixin f-ui-1() {
-  font-family: $sans-serif-font;
+  font-family: $font;
 }
 
 %f-ui-1,
 .f-ui-1 {
   @include f-ui-1;
-}
-
-// ####################################################
-// UI 2
-
-@mixin f-ui-2() {
-  font-family: $sans-serif-font;
-  font-kerning: normal;
-  font-variant-ligatures: common-ligatures;
-}
-
-%f-ui-2,
-.f-ui-2 {
-  @include f-ui-2;
 }

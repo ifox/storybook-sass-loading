@@ -1,13 +1,7 @@
 const path = require('path');
 const baseConfig = require(path.resolve(__dirname, '../vue.config.js'));
 
-// Export a function. Accept the base config as the only param.
-module.exports = async ({ config, mode }) => {
-  // `mode` has a value of 'DEVELOPMENT' or 'PRODUCTION'
-  // You can change the configuration based on that.
-  // 'PRODUCTION' is used when building the static version of storybook.
-
-  // Aliases
+module.exports = async ({ config }) => {
   config.resolve.alias = {
     ...config.resolve.alias, // Storybook internal aliases.
     ...baseConfig.configureWebpack.resolve.alias // Core Library aliased.
@@ -15,16 +9,9 @@ module.exports = async ({ config, mode }) => {
 
   config.module.rules.push({
     test: /\.s?css$/,
-    use: [
-      'style-loader', // Creates `style` nodes from JS strings
-      'css-loader', // Translates CSS into CommonJS
-      {
-        loader: 'sass-loader' // Compiles Sass to CSS
-      }
-    ],
+    use: ['style-loader', 'css-loader', 'sass-loader'],
     include: path.resolve(__dirname, '../')
   });
 
-  // Return the altered config
   return config;
 };

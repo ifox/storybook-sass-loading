@@ -1,8 +1,8 @@
 import Button from './index.vue';
 
 export default {
-  title: 'Atoms/Button',
-  id: 'atoms/button',
+  title: 'Atoms/Button2',
+  id: 'atoms/button2',
   component: Button
 };
 
@@ -14,5 +14,5 @@ export const textButton = () => ({
 });
 
 textButton.story = {
-  name: 'Text Button'
+  name: 'Text Button2'
 };

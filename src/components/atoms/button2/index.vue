@@ -1,6 +1,6 @@
 <template>
   <button :name="name">
-    <slot>{{ name }}</slot>
+    <slot>{{ value }}</slot>
   </button>
 </template>
 

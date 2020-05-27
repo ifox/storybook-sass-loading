@@ -1,0 +1,9 @@
+@import '~styles/base';
+
+.a-btn {
+  @include button-styles;
+}
+
+.a-btn--text {
+  @include button-text;
+}

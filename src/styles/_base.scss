@@ -3,8 +3,7 @@
 @import 'setup/colors';
 @import 'setup/mixins';
 @import 'setup/typography';
-@import 'setup/forms';
 
 body {
-  font-family: $sans-serif-font;
+  font-family: $font;
 }

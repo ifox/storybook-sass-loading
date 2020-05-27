@@ -1,60 +1,12 @@
-// Main Color List - try not to use
-@import 'colors/blue';
-@import 'colors/magenta';
-@import 'colors/orange';
-@import 'colors/sunset';
-@import 'colors/yellow';
-@import 'colors/garden';
-@import 'colors/sky';
-@import 'colors/bronze';
-@import 'colors/neutral';
-@import 'colors/other';
-
-// Colors by usage - use these!
-$color__background: $color__white;
-$color__background--dark: $color__black;
-$color__background--blue: $color__blue;
-$color__background--grey: $color__grey--70;
-$color__background--grey--light: $color__grey--10;
-$color__background--warm-grey: $color__warm-grey--10;
-$color__background--magenta: $color__magenta;
-$color__background--yellow: $color__yellow;
-$color__background--sunset: $color__sunset;
-$color__background--orange: $color__orange;
-$color__background--garden: $color__garden;
-$color__background--garden-light: $color__garden--30;
-$color__background--green: $color__garden--60;
-$color__background--sky: $color__sky;
-$color__background--navy: $color__blue--80;
-$color__background--bronze: $color__bronze;
-$color__background--alert: $color__red--85;
-
-$color__text: $color__grey--90;
-$color__text--on-dark: $color__white;
-$color__text--muted: $color__grey--60;
-$color__text--pure-black: $color__black;
-$color__text--open: $color__garden--60;
-$color__text--closed: $color__magenta;
-$color__text--highlight: $color__blue;
-$color__text--opening-soon: $color__orange;
-
-$color__rules: $color__grey--20;
-$color__rules--on-dark: $color__white;
-$color__rules--on-dark--muted: rgba($color__white, 0.2);
-$color__rules--dark: $color__black;
-$color__rules--footer: rgba($color__rules--dark, 0.2);
-
-$color__link: $color__blue;
-$color__link--hover: $color__blue;
-$color__link--disabled: $color__grey--70;
+$color__link: #1a47b8;
+$color__link--hover: #1a47b8;
+$color__link--disabled: #5b5b5b;
 $color__link--active: #14358a;
-$color__link--outline: $color__grey--60;
+$color__link--outline: #767676;
 
-$color__button: $color__white;
-$color__button--background: $color__black;
+$color__button: #fff;
+$color__button--background: #000;
 $color__button--hover: #222;
-$color__button--disabled: $color__grey--40;
+$color__button--disabled: #b2b2b2;
 $color__button--active: #444;
-$color__button--outline: $color__grey--60;
-
-$color__search-placeholder: $color__blue--20;
+$color__button--outline: #767676;

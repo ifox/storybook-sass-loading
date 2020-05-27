@@ -1,2 +1,17 @@
-@import 'mixins/forms';
-@import 'mixins/other';
+@import 'mixins/button';
+
+@mixin link-focus {
+  &:focus {
+    outline: 1px solid $color__link--outline;
+    outline-offset: 8px;
+  }
+
+  &:focus[data-focus-method='mouse'],
+  &:focus[data-focus-method='touch'] {
+    outline: none;
+  }
+
+  &:focus:not(:focus-visible) {
+    outline: none;
+  }
+}

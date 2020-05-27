@@ -1,17 +1,36 @@
-@mixin link-focus {
-  &:focus {
-    outline: 1px solid $color__link--outline;
-    outline-offset: 8px;
-  }
+/*
+  @mixin reset-btn
 
-  &:focus[data-focus-method='mouse'],
-  &:focus[data-focus-method='touch'] {
-    outline: none;
-  }
+  Remove default browser style for button tag
+*/
+@mixin reset-btn {
+  // sass-lint:disable-block no-vendor-prefixes
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background-color: transparent;
+  white-space: nowrap;
+  cursor: pointer;
+}
 
-  &:focus:not(:focus-visible) {
-    outline: none;
-  }
+@mixin button-text {
+  display: inline-flex;
+  align-items: center;
+  margin: 0px;
+  padding-top: 0.2em;
+  padding-bottom: 0.25em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  border: 1px solid transparent;
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
 }
 
 @mixin button-focus {

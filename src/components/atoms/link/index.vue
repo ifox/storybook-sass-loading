@@ -5,7 +5,9 @@
     :aria-label="ariaLabel ? ariaLabel : false"
     @click="handleClick"
   >
-    <span v-if="slotPassed" class="a-link__label">{{ trimSlot }}</span>
+    <span class="a-link__label">
+      <slot>{{ ariaLabel }}</slot>
+    </span>
   </a>
 </template>
 
@@ -45,16 +47,10 @@ export default {
       }
 
       return classes;
-    },
-    trimSlot() {
-      return this.slotPassed() ? this.$slots.default[0].text.trim() : '';
     }
   },
 
   methods: {
-    slotPassed() {
-      return !!this.$slots.default;
-    },
     handleClick(e) {
       e.preventDefault();
     }

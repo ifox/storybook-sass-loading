@@ -1,13 +1,8 @@
-// ####################################################
-// Subhead 3
-
 @mixin f-subhead-3() {
-  font-family: $sans-serif-font;
-  font-kerning: normal;
-  font-variant-ligatures: common-ligatures;
+  font-family: $font;
+  font-size: 2em;
 
   .a-link {
-    font: inherit;
     letter-spacing: inherit;
   }
 }
