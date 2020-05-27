@@ -1,0 +1,38 @@
+// Some timing suggestions
+$timing--micro: 95ms;
+$timing--short: 195ms; // Usually for content leaving screen
+$timing--medium: 225ms; // Usually for content entering screen
+$timing--long: 300ms; // Usually for full screen content
+$timing--xlong: 600ms;
+
+// Standard curve - movement within screen bounds
+$bezier--standard: cubic-bezier(0.25, 0.1, 0.25, 1);
+
+// Deceleration curve (“Easing out”) - movement from off screen
+$bezier--ease-out: cubic-bezier(0, 0, 0.2, 1);
+
+// Acceleration curve (“Easing in”) - movement from on screen
+$bezier--ease-in: cubic-bezier(0.4, 0, 1, 1);
+
+// Sharp curve
+$bezier--sharp: cubic-bezier(0.4, 0, 0.6, 1);
+
+$link-transition: color $timing--short $bezier--standard,
+  background-color $timing--short $bezier--standard,
+  border-color $timing--short $bezier--standard;
+
+// Spacing Presets
+$spacing-01: 4px;
+$spacing-02: 8px;
+$spacing-03: 12px;
+$spacing-04: 16px;
+$spacing-05: 20px;
+$spacing-06: 24px;
+$spacing-07: 28px;
+$spacing-08: 32px;
+$spacing-09: 36px;
+$spacing-10: 48px;
+$spacing-11: 60px;
+$spacing-12: 72px;
+$spacing-13: 84px;
+$spacing-14: 96px;

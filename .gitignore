@@ -1,0 +1,25 @@
+.DS_Store
+/coverage
+/dist
+/storybook-static
+jest-test-results.json
+node_modules
+
+# local env filesx
+.env
+.env.local
+.env.*.local
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

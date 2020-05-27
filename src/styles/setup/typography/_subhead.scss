@@ -1,0 +1,18 @@
+// ####################################################
+// Subhead 3
+
+@mixin f-subhead-3() {
+  font-family: $sans-serif-font;
+  font-kerning: normal;
+  font-variant-ligatures: common-ligatures;
+
+  .a-link {
+    font: inherit;
+    letter-spacing: inherit;
+  }
+}
+
+%f-subhead-3,
+.f-subhead-3 {
+  @include f-subhead-3;
+}

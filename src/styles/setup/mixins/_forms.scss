@@ -1,0 +1,67 @@
+/*
+  @mixin placeholder
+
+  Style form placeholder text
+*/
+
+@mixin placeholder {
+  &::-webkit-input-placeholder {
+    @content;
+  }
+
+  &::-moz-placeholder {
+    @content;
+  }
+
+  &:-moz-placeholder {
+    @content;
+  }
+
+  &:-ms-input-placeholder {
+    @content;
+  }
+}
+
+/*
+  @mixin reset-btn
+
+  Remove default browser style for button tag
+*/
+@mixin reset-btn {
+  // sass-lint:disable-block no-vendor-prefixes
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background-color: transparent;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+/*
+  @mixin reset-input
+
+  Remove default browser style for input tag
+*/
+@mixin reset-input {
+  // sass-lint:disable-block no-vendor-prefixes
+
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+  padding: 0;
+  border: 0 none;
+  border-radius: 0;
+  background-color: transparent;
+  font-family: inherit;
+  font-size: inherit;
+  outline: none;
+
+  &::-ms-clear {
+    display: none;
+  }
+}

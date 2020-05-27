@@ -1,0 +1,83 @@
+@mixin link-focus {
+  &:focus {
+    outline: 1px solid $color__link--outline;
+    outline-offset: 8px;
+  }
+
+  &:focus[data-focus-method='mouse'],
+  &:focus[data-focus-method='touch'] {
+    outline: none;
+  }
+
+  &:focus:not(:focus-visible) {
+    outline: none;
+  }
+}
+
+@mixin button-focus {
+  &:focus {
+    outline: 1px solid $color__link--outline;
+    outline-offset: 6px;
+  }
+
+  &:focus[data-focus-method='mouse'],
+  &:focus[data-focus-method='touch'] {
+    outline: none;
+  }
+
+  &:focus:not(:focus-visible) {
+    outline: none;
+  }
+}
+
+@mixin button-styles() {
+  @include reset-btn;
+  @include button-focus;
+  background-color: $color__button--background;
+  color: $color__button;
+  transition: $link-transition;
+
+  &:hover {
+    background-color: $color__button--hover;
+  }
+
+  &:active {
+    background-color: $color__button--active;
+  }
+
+  @media (hover: none) {
+    &:hover,
+    &:active {
+      background-color: $color__button--background;
+    }
+  }
+
+  &:disabled {
+    background-color: $color__button--disabled;
+    cursor: default;
+  }
+
+  [class*='s-bg--'] & {
+    background-color: var(--s-bg-btn-bg);
+    color: var(--s-bg-btn-color);
+
+    &:hover {
+      background-color: var(--s-bg-btn-bg-hover);
+    }
+
+    &:active {
+      background-color: var(--s-bg-btn-bg-active);
+    }
+
+    @media (hover: none) {
+      &:hover,
+      &:active {
+        background-color: var(--s-bg-btn-bg);
+      }
+    }
+
+    &:disabled {
+      background-color: var(--s-bg-btn-bg-disabled);
+    }
+  }
+}

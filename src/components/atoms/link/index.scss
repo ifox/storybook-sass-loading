@@ -1,0 +1,35 @@
+@import '~styles/base';
+
+.a-link {
+  @include link-focus;
+  @include f-ui-1;
+  display: inline-block;
+  position: relative;
+  color: $color__link;
+  text-decoration: none;
+  transition: $link-transition;
+
+  .a-link__label {
+    border-bottom: 1px solid transparent;
+    transition: $link-transition;
+  }
+
+  &:hover,
+  &.a-link--active {
+    .a-link__label {
+      border-bottom-color: inherit;
+    }
+  }
+
+  &:active {
+    color: $color__link--active;
+
+    .a-link__label {
+      border-bottom-color: inherit;
+    }
+  }
+
+  &.a-link--disabled {
+    color: $color__link--disabled;
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "name": "storybook-issue-repro",
+  "version": "0.0.1",
+  "description": "Storybook issue repro",
+  "author": {
+    "name": "Getty Digital"
+  },
+  "license": "UNLICENSED",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "main": "dist/storybook-ui.common.js",
+  "scripts": {
+    "build": "vue-cli-service build --target lib --name storybook-ui ./src/index.js --mode production",
+    "build:storybook": "build-storybook",
+    "clean": "del ./dist ./storybook-static jest-test-results.json",
+    "dev": "vue-cli-service build --target lib --name storybook-ui ./src/index.js --watch --mode production",
+    "lint": "vue-cli-service lint --no-fix",
+    "lint:fix": "vue-cli-service lint --fix",
+    "prebuild:storybook": "npm run test:generate-output",
+    "prestorybook": "npm run test:generate-output",
+    "storybook": "start-storybook -p 6006",
+    "stylelint": "stylelint",
+    "test": "jest -w 1",
+    "test:generate-output": "jest --json --maxWorkers=2 --outputFile=jest-test-results.json || true"
+  },
+  "dependencies": {
+    "core-js": "^3.6.5",
+    "path": "^0.12.7",
+    "vue": "^2.6.11"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.4",
+    "@babel/plugin-proposal-optional-chaining": "^7.7.4",
+    "@storybook/addon-a11y": "^5.3.18",
+    "@storybook/addon-actions": "^5.3.18",
+    "@storybook/addon-docs": "^5.3.18",
+    "@storybook/addon-events": "^5.3.18",
+    "@storybook/addon-jest": "^5.3.18",
+    "@storybook/addon-knobs": "^5.3.18",
+    "@storybook/addon-links": "^5.3.18",
+    "@storybook/addon-notes": "^5.3.18",
+    "@storybook/addon-viewport": "^5.3.18",
+    "@storybook/addons": "^5.3.18",
+    "@storybook/vue": "^5.3.18",
+    "@vue/cli-plugin-babel": "^4.4.1",
+    "@vue/cli-plugin-eslint": "^4.4.1",
+    "@vue/cli-plugin-unit-jest": "^4.4.1",
+    "@vue/cli-service": "^4.4.1",
+    "@vue/eslint-config-prettier": "^6.0.0",
+    "@vue/test-utils": "^1.0.3",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-eslint": "^10.1.0",
+    "babel-preset-vue": "^2.0.2",
+    "del-cli": "^3.0.0",
+    "eslint": "^7.1.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-vue": "^6.2.2",
+    "file-loader": "^6.0.0",
+    "husky": "^4.2.5",
+    "jest": "^26.0.1",
+    "jest-transform-stub": "^2.0.0",
+    "lint-staged": "^10.2.6",
+    "prettier": "^2.0.5",
+    "sass": "^1.26.5",
+    "sass-loader": "^8.0.2",
+    "storybook-chroma": "^4.0.2",
+    "storybook-chromatic": "^4.0.2",
+    "stylelint": "^13.5.0",
+    "stylelint-config-recommended": "^3.0.0",
+    "stylelint-order": "^4.0.0",
+    "stylelint-prettier": "^1.1.1",
+    "vue-eslint-parser": "^7.0.0",
+    "vue-jest": "3.0.5",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ]
+}
